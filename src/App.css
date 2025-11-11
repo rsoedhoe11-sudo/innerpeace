@@ -46,4 +46,12 @@
 button {
   background-color: transparent;
   border: none;
+  outline: none; /* removes the focus outline */
+}
+
+button:focus,
+button:active,
+button:visited {
+  border: none;
+  outline: none; /* ensures no border/outline when selected */
 }

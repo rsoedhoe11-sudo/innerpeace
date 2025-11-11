@@ -8,7 +8,6 @@ import {
   MessageSquare,
   TrendingUp,
   X,
-  ChevronLeft,
   Heart,
 } from "lucide-react";
 import "./App.css";
@@ -358,20 +357,10 @@ const AuthModalContent = ({ setIsLoggedIn, setIsAuthModalOpen }) => {
 
       <button
         onClick={() => setIsAuthModalOpen(false)}
-        className="absolute top-4 right-4 text-white hover:text-gray-300 transition z-50"
+        className="absolute top-4 right-0 text-gray-400  transition z-50"
         aria-label="Close Authentication">
         <X size={24} />
       </button>
-
-      {isRegisterView && (
-        <button
-          onClick={switchToLogin}
-          className="absolute top-4 left-4 text-gray-600 hover:text-indigo-600 transition z-50 flex items-center !bg-gray-100 p-2 rounded-lg"
-          aria-label="Back to Login">
-          <ChevronLeft size={20} className="mr-1" />
-          Back
-        </button>
-      )}
 
       {isRegisterView ? (
         <RegistrationForm switchToLogin={switchToLogin} setModal={setModal} />
@@ -1174,18 +1163,6 @@ const App = () => {
     setIsLoggedIn(false);
     setCurrentPage("lander");
   };
-
-  const navItems = [
-    { name: "Home", page: "home", icon: Home, requiresLogin: true },
-    { name: "Quiz", page: "quiz", icon: Sun, requiresLogin: true },
-    { name: "Progress", page: "home", icon: TrendingUp, requiresLogin: true }, // Progress is shown on Home
-    {
-      name: "Login / Register",
-      page: "auth",
-      icon: LogIn,
-      requiresLogin: false,
-    },
-  ];
 
   return (
     <div className="min-h-screen !bg-gray-100 font-sans antialiased flex flex-col">
