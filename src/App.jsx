@@ -297,7 +297,7 @@ const LoginForm = ({
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
+            className="text-gray-900 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
             placeholder="test@gmail.com"
             required
           />
@@ -310,7 +310,7 @@ const LoginForm = ({
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
+            className="text-gray-900 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
             placeholder="12345"
             required
           />
@@ -913,7 +913,7 @@ const OneOnOneChat = ({ setPage }) => {
               <p className="font-medium text-sm mb-1">
                 {msg.sender === "Therapist" ? "Dr. Evelyn" : "You"}
               </p>
-              <p>{msg.text}</p>
+              <p className="text-gray-900">{msg.text}</p>
             </div>
           </div>
         ))}
@@ -926,7 +926,7 @@ const OneOnOneChat = ({ setPage }) => {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyPress={(e) => e.key === "Enter" && handleSend()}
-            className="flex-grow p-3 border border-gray-300 rounded-full focus:ring-indigo-500 focus:border-indigo-500 transition"
+            className="text-gray-900 flex-grow p-3 border border-gray-300 rounded-full focus:ring-indigo-500 focus:border-indigo-500 transition"
             placeholder="Type your message..."
           />
           <button
