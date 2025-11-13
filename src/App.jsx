@@ -166,7 +166,7 @@ const RegistrationForm = ({ switchToLogin, setModal }) => {
             type="text"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
+            className="text-gray-900 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
             placeholder="John Doe"
             required
           />
@@ -179,7 +179,7 @@ const RegistrationForm = ({ switchToLogin, setModal }) => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
+            className="text-gray-900 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
             placeholder="your@email.com"
             required
           />
@@ -192,7 +192,7 @@ const RegistrationForm = ({ switchToLogin, setModal }) => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
+            className="text-gray-900 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
             placeholder="At least 6 characters"
             required
           />
@@ -205,14 +205,13 @@ const RegistrationForm = ({ switchToLogin, setModal }) => {
             <select
               value={gender}
               onChange={(e) => setGender(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="text-gray-900 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
               required>
               <option value="" disabled>
                 Select
               </option>
               <option value="female">Female</option>
               <option value="male">Male</option>
-              <option value="non-binary">Non-Binary</option>
               <option value="prefer-not-say">Prefer not to say</option>
             </select>
           </div>
@@ -224,7 +223,7 @@ const RegistrationForm = ({ switchToLogin, setModal }) => {
               type="date"
               value={dob}
               onChange={(e) => setDob(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
+              className="text-gray-900 w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-indigo-500 focus:border-indigo-500 transition"
               required
             />
           </div>
@@ -593,9 +592,7 @@ const QuizQuestionRenderer = ({ question, answer, setAnswer }) => {
                 className="form-radio h-5 w-5 text-indigo-600"
                 required
               />
-              <span className="ml-3 text-gray-700">
-                {option.label} (Score: +{option.score})
-              </span>
+              <span className="ml-3 text-gray-700">{option.label}</span>
             </label>
           ))}
         </div>
